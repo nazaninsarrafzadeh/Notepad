@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".controller.activities.NotepadActivity"
+    >
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/home_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/toolbar">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" یادداشت جدید"
+            android:layout_gravity="right"
+            android:layout_marginRight="5dp"
+            android:textSize="20sp"
+            android:textColor="#fff"/>
+    </android.support.v7.widget.Toolbar>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/titleTextView"
+        android:layout_below="@+id/home_toolbar"
+        android:hint="عنوان"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:layout_gravity="right"
+        android:background="@drawable/round_button"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/note"
+        android:hint="یادداشتتو بنویس..."
+        android:textDirection="rtl"
+        android:gravity="right"
+        android:backgroundTint="@color/toolbar"
+        android:layout_below="@+id/titleTextView"
+        android:layout_above="@+id/savee"
+        android:textSize="18sp"
+        android:background="@drawable/round_button"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/savee"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/save"
+            android:background="@color/toolbar"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:layout_alignParentBottom="true"
+            android:text="ذخیره کردن"
+            android:onClick="save"/>
+    </LinearLayout>
+
+
+
+</RelativeLayout>
